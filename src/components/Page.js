@@ -16,7 +16,7 @@ export default class Page extends React.Component {
     if (isLoading) {
       return <p>Загрузка...</p>
     } else {
-      return photos.map((entry, index) => ( // [1]
+      return photos.map((entry) => ( // [1]
         <div key={entry.id} className="photo">
           <p>
             <img src={entry.sizes[0].url} alt="" />
