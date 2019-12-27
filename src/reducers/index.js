@@ -1,5 +1,8 @@
-export const initState = {
-    user: 'Unknown User',
-}
+import { combineReducers } from 'redux'
+import { pageReducer } from './page'
+import { userReducer } from './user'
 
-export const rootReducer = (state = initState) => state;
+export const rootReducer = combineReducers({
+  page: pageReducer,
+  user: userReducer,
+})
